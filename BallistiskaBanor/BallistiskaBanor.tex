@@ -1,0 +1,91 @@
+\documentclass[a4paper]{article}
+
+\usepackage[swedish]{babel}
+\usepackage[utf8x]{inputenc}
+
+\usepackage[vmargin=3cm,hmargin=2cm]{geometry}
+\usepackage{parskip}
+\usepackage[runin]{abstract}
+\renewcommand{\abstitleskip}{0mm}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\addto\extrasswedish{%
+	\def\equationautorefname{Ekvation}%
+	\def\figureautorefname{Figur}%
+	\def\tableautorefname{Tabell}%
+	\def\sectionautorefname{Rubrik}%
+	\def\subsectionautorefname{Underrubrik}%
+	\def\pageautorefname{Sida}%
+}
+
+% Hack för att få komma istället för punkt i matematiska uttryck
+% $3.141592$ blir 3,141592
+% Om man använder komma direkt får man ett litet oönskat mellanrum:
+% $3,141592$ blir 3, 141592
+\DeclareMathSymbol{,}{\mathpunct}{letters}{"3B}
+\DeclareMathSymbol{.}{\mathord}{letters}{"3B}
+\DeclareMathSymbol{\decimal}{\mathord}{letters}{"3A}
+
+% Kommando för att få icke-kursiva enheter i matematiska uttryck
+% $10\unit{km}$ blir 10 km
+\newcommand{\unit}[1]{\ensuremath{\,\mathrm{#1}}}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf[C]{\thepage}
+\fancyhead[C]{Statik och Partikeldynamik, FMEA05}
+\fancyhead[R,L]{}
+\fancypagestyle{plain}{
+  \fancyhead{}
+}
+\setcounter{secnumdepth}{-1}
+
+\title{Fin titel}
+\author{Anton Johansson\\Marcus Lindell Biehl\\Lunds Universitet}
+
+\makeatletter
+
+\renewcommand*\maketitle{
+  {
+    \begin{center}
+      {\huge\bfseries \@title}\\
+      \vspace{5mm}
+      {\large \@author}
+    \end{center}
+    \vspace{2mm}
+  }
+}
+\makeatother
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  %Kort beskrivning  av resultaten (5-10  rader). Det ska inte  vara en
+  %innehållsbeskrivning (först gör vi det, sen använder vi den metoden,
+  %och så jämför vi det med de där tidigare kända resultaten, etc) utan
+  %vara   koncentrerat  till   ”resultatet”,   vad   man  kommer   fram
+  %till. Sammanfattningen är uppsatsens löpsedel. Den ska vara kort och
+  %kärnfull och locka läsare genom att  effektivt göra klart vad det är
+  %man uppnår genom att läsa rapporten.
+\end{abstract}
+
+\vspace{2mm}
+
+\section{Inledning}
+
+\section{Metod}
+
+\section{Resultat}
+
+\section{Diskussion}
+
+\section{Slutsats}
+
+\end{document}
+
